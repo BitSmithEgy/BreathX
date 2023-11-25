@@ -1,0 +1,96 @@
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BreathX</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css'" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/icofont.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/lightcase.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/swiper.min.css' %}">
+</head>
+
+<body>
+    <div class="mobile-menu">
+        <nav class="mobile-header">
+            <div class="header-logo">
+                <a href="/"><img src="{% static 'assets/images/logo/02.png' %}" alt="logo"></a>
+            </div>
+            <div class="header-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <nav class="mobile-menu">
+            <div class="mobile-menu-area">
+                <div class="mobile-menu-area-inner">
+                    <ul class="lab-ul">
+                        <li><a href="/#home">Home</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#symptoms">Symptoms</a></li>
+                        <li><a href="/#tracker">Tracker</a></li>
+
+                        <li><a href="/#timeline">Timeline</a></li>
+                        <li><a href="/#prevention">Prevention</a></li>
+                        <li><a href="/#faq">Faq</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </div>
+    <header class="header-section transparent-header" id="home">
+        <div class="header-area">
+            <div class="container">
+                <div class="primary-menu">
+                    <div class="logo">
+                        <a href="/"><img src="{% static 'assets/images/logo/03.png' %}" alt="logo"></a>
+                    </div>
+                    <div class="main-area">
+                        <div class="main-menu">
+                            <ul class="lab-ul">
+                                <li><a href="/#home">Home</a></li>
+                                <li><a href="/#about">About</a></li>
+                                <li><a href="/#symptoms">Symptoms</a></li>
+                                <li><a href="/#tracker">Tracker</a></li>
+
+                                <li><a href="/#timeline">Timeline</a></li>
+                                <li><a href="/#prevention">Prevention</a></li>
+                                <li><a href="/#faq">Faq</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner-section home-3" style="height: 100%;">
+        <div class="banner-area">
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-12 col-12">
+                        <div id="content" style="margin-top:2em">{% block content %}{% endblock %}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<footer>
+
+    <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
+</footer>
+
+
+</html>

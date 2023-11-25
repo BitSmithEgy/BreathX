@@ -1,0 +1,5 @@
+{% extends "UserView/base.html" %}
+{% block content %}
+    <h2>{{ result }}</h2>
+    <a href="{% url 'booking' pk=pk result=result %}" class="btn btn-primary btn-lg" id="btn-predict" style="text-decoration: none;">Book a doctor</a>
+{% endblock content %}

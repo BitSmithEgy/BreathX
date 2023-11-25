@@ -1,0 +1,6 @@
+# models.py
+from django.db import models
+
+class UploadedImage(models.Model):
+    image = models.ImageField(upload_to='uploads/')
+    # Add any additional fields you need

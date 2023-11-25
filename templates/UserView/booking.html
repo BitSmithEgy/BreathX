@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <style>
+        body {
+            background: linear-gradient(180deg, #3498db, #2980b9); /* Blue gradient background */
+            color: #000; /* Set text color outside the form container to black */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff; /* White background for form container */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f8f8f8; /* Light gray background for input fields */
+        }
+
+        input[type="submit"] {
+            background-color: #3498db; /* Blue button color */
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Booking Form</h2>
+    <form action="{% url 'booking' pk=pk result=result %}" method="post">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="diabetes">Do you have diabetes?</label>
+            <input type="checkbox" id="diabetes" name="diabetes" required>
+        </div>
+
+        <div class="form-group">
+            <label for="bloodPressure">Do you have high blood pressure?</label>
+            <input type="checkbox" id="bloodPressure" name="bloodPressure" required>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Book Now">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

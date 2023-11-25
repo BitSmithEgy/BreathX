@@ -1,0 +1,5 @@
+{% extends "UserView/base.html" %}
+{% block content %}
+    <h2>{{ result }}</h2>
+    <a href="{{ csv_file_url }}" download="{{ name }}_booking_info.csv" class="btn btn-primary btn-lg" style="text-decoration: none;">Download result</a>
+{% endblock content %}
